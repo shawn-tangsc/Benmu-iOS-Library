@@ -55,7 +55,7 @@
 
 #import "WXBMNetworkDefaultlpml.h"
 
-#import "BMResourceManager.h"
+
 #import "BMEventsModule.h"
 #import "BMBrowserImgModule.h"
 #import "BMRichTextComponent.h"
@@ -121,9 +121,7 @@
     [[YTKNetworkConfig sharedConfig] setBaseUrl:platformInfo.url.request];
     [[YTKNetworkConfig sharedConfig] setCdnUrl:platformInfo.url.image];
     
-    /** 应用最新js资源文件 */
-    [[BMResourceManager sharedInstance] compareVersion];
-    
+  
     /** 初始化数据库 */
     [[BMDB DB] configDB];
     

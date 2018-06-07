@@ -52,8 +52,8 @@
 /* 当业务流程中弹出登录页面，但是用户没有登录点击返回，调用此方法清除之前缓存的router信息 */
 - (void)clearRouterInfo;
 
-/** js资源更新完毕提示 */
-- (void)showJsResourceUpdatedAlert;
+///** js资源更新完毕提示 */
+//- (void)showJsResourceUpdatedAlert;
 
 /**
  加载一个常驻内存的WeexInstance作为js端的中介者

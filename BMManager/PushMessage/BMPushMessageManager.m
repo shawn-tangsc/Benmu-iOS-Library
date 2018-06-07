@@ -123,7 +123,20 @@
 #pragma mark - Api Request
 
 #pragma mark - Custom Delegate & DataSource
-
+- (void)GeTuiSdkDidAliasAction:(NSString *)action result:(BOOL)isSuccess sequenceNum:(NSString *)aSn error:(NSError *)aError{
+    if ([kGtResponseBindType isEqualToString:action]) {
+        NSLog(@"绑定结果 ：%@ !, sn : %@", isSuccess ? @"成功" : @"失败", aSn);
+        if (!isSuccess) {
+            NSLog(@"失败原因: %@", aError);
+            
+        }
+    } else if ([kGtResponseUnBindType isEqualToString:action]) {
+        NSLog(@"绑定结果 ：%@ !, sn : %@", isSuccess ? @"成功" : @"失败", aSn);
+        if (!isSuccess) {
+            NSLog(@"失败原因: %@", aError);
+        }
+    }
+}
 - (void)GeTuiSdkDidRegisterClient:(NSString *)clientId
 {
     /* 将cid保存 */

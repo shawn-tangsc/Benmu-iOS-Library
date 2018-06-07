@@ -10,7 +10,7 @@
 
 #ifdef DEBUG
 #import "DebugSettingVC.h"
-#import "BMResourceManager.h"
+//#import "BMResourceManager.h"
 #import "UINavigationBar+NavigationBarExtend.h"
 #import <BMBaseViewController.h>
 #import "BMDebugManager.h"
@@ -33,10 +33,10 @@
     // Do any additional setup after loading the view.
     self.title = @"Debug";
     
-    NSDictionary * userInfo = [[BMResourceManager sharedInstance] loadConfigData:K_JS_VERSION_PATH];
-    if ([userInfo isKindOfClass:[NSDictionary class]]) {
-        _jsVersion = userInfo[@"jsVersion"] ? userInfo[@"jsVersion"]:@"";
-    }
+//    NSDictionary * userInfo = [[BMResourceManager sharedInstance] loadConfigData:K_JS_VERSION_PATH];
+//    if ([userInfo isKindOfClass:[NSDictionary class]]) {
+//        _jsVersion = userInfo[@"jsVersion"] ? userInfo[@"jsVersion"]:@"";
+//    }
     
     UIBarButtonItem * item = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(close)];
     self.navigationItem.leftBarButtonItem = item;

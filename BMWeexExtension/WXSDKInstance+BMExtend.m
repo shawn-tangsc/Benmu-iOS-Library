@@ -9,7 +9,7 @@
 #import "WXSDKInstance+BMExtend.h"
 #import <objc/runtime.h>
 #import "BMNotifactionCenter.h"
-#import "BMResourceManager.h"
+#import "HMResourceManager.h"
 
 @implementation WXSDKInstance(BMExtend)
 
@@ -27,7 +27,7 @@
 - (void)bm__renderWithMainBundleString:(NSString *)mainBundleString
 {
     /** 注入本地的base js */
-    NSString *baseScript = [BMResourceManager sharedInstance].bmWidgetJs;
+    NSString *baseScript = [HMResourceManager sharedInstance].bmWidgetJs;
     
     if (baseScript.length) {
         mainBundleString = [baseScript stringByAppendingString:mainBundleString];
