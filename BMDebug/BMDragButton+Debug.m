@@ -12,6 +12,7 @@
 #import "BMBaseViewController.h"
 #import "BMMediatorManager.h"
 #import <UIKit/UIKit.h>
+#import "BMResourceManager.h"
 #import "Masonry.h"
 #import "BMNavigationController.h"
 #import <TBWXDevTool/WXDevTool.h>

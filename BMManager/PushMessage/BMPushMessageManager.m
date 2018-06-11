@@ -219,7 +219,7 @@
     
     // [ GTSdk ]：将收到的APNs信息传给个推统计
     [GeTuiSdk handleRemoteNotification:userInfo];
-
+    
     completionHandler();
 }
 

@@ -14,7 +14,7 @@
 
 #import "BMDeviceManager.h"
 #import "BMConfigManager.h"
-//#import "BMResourceManager.h"
+#import "BMResourceManager.h"
 
 #define BM_FONT_SIZE @"bmFontSize"
 #define BM_REQUEST_URL @"request"
@@ -121,11 +121,11 @@
         //touchBar高度
         [bmData setValue:[NSNumber numberWithFloat:K_TOUCHBAR_HEIGHT / [WXUtility defaultPixelScaleFactor]] forKey:BMTouchBarHeight];
         //JSVersion
-//        NSDictionary * userInfo = [[BMResourceManager sharedInstance] loadConfigData:K_JS_VERSION_PATH];
+        NSDictionary * userInfo = [[BMResourceManager sharedInstance] loadConfigData:K_JS_VERSION_PATH];
         NSString *jsVersion = @"jsVersion 取不到";
-//        if ([userInfo isKindOfClass:[NSDictionary class]] && userInfo[@"jsVersion"]) {
-//            jsVersion = userInfo[@"jsVersion"];
-//        }
+        if ([userInfo isKindOfClass:[NSDictionary class]] && userInfo[@"jsVersion"]) {
+            jsVersion = userInfo[@"jsVersion"];
+        }
         [bmData setValue:jsVersion forKey:BMJsVersion];
         
         environment = [[NSDictionary alloc] initWithDictionary:bmData];

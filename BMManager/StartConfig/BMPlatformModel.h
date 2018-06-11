@@ -19,9 +19,10 @@
 @property (nonatomic, copy) NSString *request;              /**< 数据请求url */
 @property (nonatomic, copy) NSString *jsServer;             /**< js文件服务器url */
 @property (nonatomic, copy) NSString *image;                /**< 图片上传接口url */
-@property (nonatomic, copy) NSString *bundleUpdate;         /**< 检查js版本接口  */
-@property (nonatomic, copy) NSString *clientUpdate;         /**< 检查原生版本接口 */
+@property (nonatomic, copy) NSString *bundleUpdate;         /**< 检查js版本接口 注：不需要请求的域名 */
+@property (nonatomic, copy) NSString *clientUpdate;         /**< 检查客户端版本接口 */
 @property (nonatomic, copy) NSString *socketServer;         /**< 热刷新sockert地址 */
+
 @end
 
 @interface BMPlatformModelGetui : NSObject

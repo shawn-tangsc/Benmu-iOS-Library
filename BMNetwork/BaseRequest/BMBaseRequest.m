@@ -35,9 +35,7 @@
         NSNumber *status = [NSNumber numberWithInteger:request.responseStatusCode ?: -1];
         NSString *errorMsg = @"";
         id data = request.responseObject ?: @{};
-        id headers = request.responseHeaders ? : @{};
         NSDictionary *resData = @{
-                                  @"header":headers,
                                   @"status": status,
                                   @"errorMsg": errorMsg,
                                   @"data": data

@@ -11,7 +11,7 @@
 #import "BMDragButton+Debug.h"
 #import "UIWindow+Util.h"
 #import "BMHotRefreshWebScoket.h"
-//#import <BMResourceManager.h>
+#import "BMResourceManager.h"
 #import "BMBaseViewController.h"
 #import "SVProgressHUD.h"
 
@@ -99,7 +99,7 @@
 - (void)refreshWeex
 {
     //刷新widgetJs
-//    [BMResourceManager sharedInstance].bmWidgetJs = nil;
+    [BMResourceManager sharedInstance].bmWidgetJs = nil;
     
     //检查js中介者是否加载成功
     [[BMMediatorManager shareInstance] loadJSMediator:NO];

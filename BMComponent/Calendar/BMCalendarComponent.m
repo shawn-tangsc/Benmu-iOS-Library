@@ -322,7 +322,7 @@ WX_EXPORT_METHOD(@selector(goNext))
 {
     
     if ([self.selectType isEqualToString:K_SelectTypeSingle]) {
-        if (self.startDate != date) {
+        if (self.startDate) {
             [calendar deselectDate:self.startDate];
         }
         self.startDate = date;
